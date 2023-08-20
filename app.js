@@ -14,11 +14,22 @@ document.getElementById('calculate').addEventListener('click',function(){
     const totalExpensesAmount = foodExpensesAmount + rentExpensesAmount + clothExpensesAmount ;
 
     const totalExpensesFeild = document.getElementById('total-expenses');
-    // const totalExpenses = parseFloat(totalExpensesFeild);
+    const totalExpensesString = totalExpensesFeild.innerText;
+    const totalExpenses = parseFloat(totalExpensesString);
     // console.log(totalExpenses);
-    // const total = totalExpensesAmount + totalExpenses;
+    const total = totalExpensesAmount + totalExpenses;
     // console.log(total);
     
-    totalExpensesFeild.innerText = totalExpensesAmount; 
+    totalExpensesFeild.innerText = total; 
+    // return total;
+
+    const totalBalanceFeild = document.getElementById('total-balance');
+    const totalBalanceString = totalBalanceFeild.innerText;
+    const totalBalance = parseFloat(totalBalanceString);
+
+    const balanceFeild = totalIncomeAmount + totalBalance;
+    const balance = balanceFeild - total;
+    totalBalanceFeild.innerText = balance;
+
 
 })
