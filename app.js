@@ -30,6 +30,29 @@ document.getElementById('calculate').addEventListener('click',function(){
     const balanceFeild = totalIncomeAmount + totalBalance;
     const balance = balanceFeild - total;
     totalBalanceFeild.innerText = balance;
+})
+document.getElementById('saving').addEventListener('click',function(){
+    const savingInputFeild = document.getElementById('saving-input');
+    const savingInputString = savingInputFeild.value;
+    const savingAmount = parseFloat(savingInputString);
 
+    const savingAmountFeild = document.getElementById('saving-amount');
+    const savingAmountString = savingAmountFeild.innerText;
+    const preSavingAmount = parseFloat(savingAmountString);
+
+    const totalBalanceFeild = document.getElementById('total-balance');
+    const totalBalanceString= totalBalanceFeild.innerText;
+    const totalBalance = parseFloat(totalBalanceString);
+
+    const saving = totalBalance / 100 * savingAmount ;
+    savingAmountFeild.innerText = saving ;
+
+    const reaminingBalanceFeild = document.getElementById('reamining-balance');
+    const reaminingBalanceString = reaminingBalanceFeild.innerText;
+    const reaminingBalance  = parseFloat(reaminingBalanceString);
+
+    const remaing = totalBalance - saving ;
+
+    reaminingBalanceFeild.innerText = remaing;
 
 })
