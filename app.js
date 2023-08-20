@@ -19,8 +19,15 @@ document.getElementById('calculate').addEventListener('click',function(){
     // console.log(totalExpenses);
     const total = totalExpensesAmount + totalExpenses;
     // console.log(total);
-    
-    totalExpensesFeild.innerText = total; 
+    if( totalIncomeAmount > 0 &&
+       foodExpensesAmount > 0 &&
+       rentExpensesAmount > 0 &&
+       clothExpensesAmount> 0
+       ){
+       totalExpensesFeild.innerText = total;
+    }
+    else{alert('please Enter valid value')}
+     
     // return total;
 
     const totalBalanceFeild = document.getElementById('total-balance');
