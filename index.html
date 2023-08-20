@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAster Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="w-3/4 m-auto bg-pink-700 text-white text-4xl py-3 text-center">
+        <h1>Money Master</h1>
+    </header>
+    <main>
+        <section class="w-3/4 m-auto">
+            <div class="flex justify-between">
+                <div class="w-2/4">
+                    <img src="image/money.jpg" alt="">
+                </div>
+                <div>
+                    <h3 class="text-2xl">Income</h3>
+                    <div class="flex justify-between">
+                        <p class="w-4/4">Income : </p><input type="text" id="total-income" placeholder="Enter Your Income" class="border-0 bg-pink-300 p-2 w-96">
+                    </div>
+                    <h3 class="text-2xl">Expensive</h3>
+                    <div class="flex justify-between my-2"><p>Food : </p><input type="text" placeholder="Enter Your Food Expensive"    class="border-0 bg-pink-300 p-2 w-96 position-right" id="food-expensive"></div>
+                    <div class="flex justify-between my-2">
+                        <p>Rent : </p><input id="rent-expensive" type="text" placeholder="Enter Your Rent Expensive" class="border-0 bg-pink-300 p-2 w-96">
+                    </div>
+                    <div class="flex justify-between my-2">
+                        <p>Clothes : <input id="cloth-expensive" type="text" placeholder="Enter Your Clothes Expensive" class="border-0 bg-pink-300 p-2 w-96"></p>
+                    </div>
+                    <div class="text-center">
+                        <button class="bg-pink-700 rounded py-2 px-4 m-auto text-white" id="calculate">Calculate</button>
+                    </div>
+                    <div>
+                        <p>Total Expenses: <span id="total-expenses">00</span></p>
+                        <p>Balance: <span>00</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
